@@ -1,25 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/header";
+import Products from "./Pages/Product";
+import Footer from "./components/footer";
+import Login from "./Pages/Auth/Login";
+import Register from "./Pages/Auth/Register";
+import Product_detail from "./Pages/Product-detail";
+import Cart from "./Pages/Cart";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Home from "./Pages/Home";
+import Topbar from "./components/topbar";
+import "./App.css";
 
 function App() {
+  const location = useLocation();
+  const isLoginPage = location.pathname === "/Login";
+  const isRegister = location.pathname === "/Register";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {isLoginPage || isRegister ? null : <Header />}
+
+      {isLoginPage || isRegister ? null : <Topbar />}
+      <div id="main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Register" element={<Register />} />
+          <Route path="/Products" element={<Products />} />
+          <Route path="/Product-detail" element={<Product_detail />} />
+          <Route path="/Cart" element={<Cart />} />
+        </Routes>
+      </div>
+
+      {/* Footer */}
+      {isLoginPage || isRegister ? null : <Footer />}
+    </>
   );
 }
 
