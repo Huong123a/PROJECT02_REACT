@@ -1,4 +1,427 @@
 {
+  "products": [
+    {
+      "id": 1,
+      "name": "Lipstick",
+      "price": 100,
+      "description": "This is a new product of this year",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 10000
+    },
+    {
+      "id": 2,
+      "name": "Eyeshadow",
+      "price": 80,
+      "description": "Add some color to your eyes",
+      "img": "/img1.webp",
+      "isNew": false,
+      "isHighlight": false,
+      "totalOrder": 7500
+    },
+    {
+      "id": 3,
+      "name": "Mascara",
+      "price": 120,
+      "description": "For long and voluminous lashes",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": false,
+      "totalOrder": 8800
+    },
+    {
+      "id": 4,
+      "name": "Foundation",
+      "price": 90,
+      "description": "Smooth and flawless skin",
+      "img": "/img1.webp",
+      "isNew": false,
+      "isHighlight": true,
+      "totalOrder": 9200
+    },
+    {
+      "id": 5,
+      "name": "Blush",
+      "price": 75,
+      "description": "Rosy cheeks for a fresh look",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 6400
+    },
+    {
+      "id": 6,
+      "name": "Lip Gloss",
+      "price": 60,
+      "description": "Shiny lips for a glamorous look",
+      "img": "/img1.webp",
+      "isNew": false,
+      "isHighlight": false,
+      "totalOrder": 5500
+    },
+    {
+      "id": 7,
+      "name": "Nail Polish",
+      "price": 10,
+      "description": "Vibrant colors for your nails",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 12500
+    },
+    {
+      "id": 8,
+      "name": "Makeup Brushes",
+      "price": 25,
+      "description": "High-quality brushes for perfect application",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 4300
+    },
+    {
+      "id": 9,
+      "name": "Eye Liner",
+      "price": 50,
+      "description": "Define your eyes with precision",
+      "img": "/img1.webp",
+      "isNew": false,
+      "isHighlight": false,
+      "totalOrder": 7200
+    },
+    {
+      "id": 10,
+      "name": "Makeup Remover",
+      "price": 15,
+      "description": "Gentle on the skin, tough on makeup",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": false,
+      "totalOrder": 9800
+    },
+    {
+      "id": 11,
+      "name": "Lip Balm",
+      "price": 30,
+      "description": "Keep your lips soft and moisturized",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 5500
+    },
+    {
+      "id": 12,
+      "name": "Setting Spray",
+      "price": 35,
+      "description": "Lock your makeup in place all day",
+      "img": "/img1.webp",
+      "isNew": false,
+      "isHighlight": true,
+      "totalOrder": 6900
+    },
+    {
+      "id": 13,
+      "name": "Bronzer",
+      "price": 70,
+      "description": "Get a sun-kissed glow all year round",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": false,
+      "totalOrder": 6200
+    },
+    {
+      "id": 14,
+      "name": "Concealer",
+      "price": 40,
+      "description": "Cover imperfections with ease",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": false,
+      "totalOrder": 8500
+    },
+    {
+      "id": 15,
+      "name": "Makeup Bag",
+      "price": 20,
+      "description": "Stylish and spacious for your makeup essentials",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 3100
+    },
+    {
+      "id": 16,
+      "name": "Face Mask",
+      "price": 5,
+      "description": "Relax and rejuvenate your skin",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 14600
+    },
+    {
+      "id": 17,
+      "name": "Hairbrush",
+      "price": 15,
+      "description": "Tangle-free and smooth hair in seconds",
+      "img": "/img1.webp",
+      "isNew": false,
+      "isHighlight": true,
+      "totalOrder": 7500
+    },
+    {
+      "id": 18,
+      "name": "Hair Dryer",
+      "price": 50,
+      "description": "Quickly dry and style your hair",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 4800
+    },
+    {
+      "id": 19,
+      "name": "Shampoo",
+      "price": 12,
+      "description": "Nourish and cleanse your hair",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 10200
+    },
+    {
+      "id": 20,
+      "name": "Conditioner",
+      "price": 12,
+      "description": "Hydrate and detangle your hair",
+      "img": "/img1.webp",
+      "isNew": false,
+      "isHighlight": false,
+      "totalOrder": 9200
+    },
+    {
+      "id": 21,
+      "name": "Hair Serum",
+      "price": 25,
+      "description": "Add shine and manageability to your hair",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": false,
+      "totalOrder": 5500
+    },
+    {
+      "id": 22,
+      "name": "Hair Gel",
+      "price": 8,
+      "description": "Style your hair with ease",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": false,
+      "totalOrder": 4100
+    },
+    {
+      "id": 23,
+      "name": "Hair Clips",
+      "price": 2,
+      "description": "Keep your hair in place with style",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 8500
+    },
+    {
+      "id": 24,
+      "name": "Curling Iron",
+      "price": 40,
+      "description": "Create beautiful curls in no time",
+      "img": "/img1.webp",
+      "isNew": false,
+      "isHighlight": true,
+      "totalOrder": 6900
+    },
+    {
+      "id": 25,
+      "name": "Straightener",
+      "price": 40,
+      "description": "Achieve sleek and straight hair effortlessly",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": false,
+      "totalOrder": 5800
+    },
+    {
+      "id": 26,
+      "name": "Hair Accessories Set",
+      "price": 15,
+      "description": "Complete your look with these accessories",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 3700
+    },
+    {
+      "id": 27,
+      "name": "Skincare Set",
+      "price": 60,
+      "description": "Revitalize and pamper your skin",
+      "img": "/img1.webp",
+      "isNew": false,
+      "isHighlight": false,
+      "totalOrder": 8400
+    },
+    {
+      "id": 28,
+      "name": "Perfume",
+      "price": 70,
+      "description": "A captivating scent that lingers",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": false,
+      "totalOrder": 5500
+    },
+    {
+      "id": 29,
+      "name": "Hand Cream",
+      "price": 10,
+      "description": "Keep your hands soft and moisturized",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 7600
+    },
+    {
+      "id": 30,
+      "name": "Body Lotion",
+      "price": 15,
+      "description": "Nourish and hydrate your skin",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 6600
+    },
+    {
+      "id": 31,
+      "name": "Bath Bombs",
+      "price": 8,
+      "description": "Turn your bath into a spa experience",
+      "img": "/img1.webp",
+      "isNew": false,
+      "isHighlight": false,
+      "totalOrder": 8900
+    },
+    {
+      "id": 32,
+      "name": "Shower Gel",
+      "price": 10,
+      "description": "Cleanse and refresh your body",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 4800
+    },
+    {
+      "id": 33,
+      "name": "Candles",
+      "price": 15,
+      "description": "Set the mood with soothing candles",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 9200
+    },
+    {
+      "id": 34,
+      "name": "Towels",
+      "price": 5,
+      "description": "Soft and absorbent towels for your daily use",
+      "img": "/img1.webp",
+      "isNew": false,
+      "isHighlight": false,
+      "totalOrder": 7400
+    },
+    {
+      "id": 35,
+      "name": "Robe",
+      "price": 25,
+      "description": "Wrap yourself in luxury and comfort",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 3600
+    },
+    {
+      "id": 36,
+      "name": "Slippers",
+      "price": 10,
+      "description": "Cozy slippers for your relaxation time",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 9500
+    },
+    {
+      "id": 37,
+      "name": "Pajamas",
+      "price": 30,
+      "description": "Comfortable and stylish sleepwear",
+      "img": "/img1.webp",
+      "isNew": false,
+      "isHighlight": true,
+      "totalOrder": 5100
+    },
+    {
+      "id": 38,
+      "name": "Blanket",
+      "price": 40,
+      "description": "Stay warm and cozy with this soft blanket",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": false,
+      "totalOrder": 7800
+    },
+    {
+      "id": 39,
+      "name": "Pillows",
+      "price": 20,
+      "description": "Rest your head on these plush pillows",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 4300
+    },
+    {
+      "id": 40,
+      "name": "Tea Set",
+      "price": 25,
+      "description": "Sip your favorite tea in style",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": true,
+      "totalOrder": 2700
+    },
+    {
+      "id": 41,
+      "name": "Coffee Maker",
+      "price": 60,
+      "description": "Brew the perfect cup of coffee",
+      "img": "/img1.webp",
+      "isNew": false,
+      "isHighlight": false,
+      "totalOrder": 3900
+    },
+    {
+      "id": 42,
+      "name": "Wine Glasses",
+      "price": 20,
+      "description": "Elegant glasses for your favorite wine",
+      "img": "/img1.webp",
+      "isNew": true,
+      "isHighlight": false,
+      "totalOrder": 6200
+    }
+  ],
+  "carts": [],
   "users": [
     {
       "email": "fefawfer",
