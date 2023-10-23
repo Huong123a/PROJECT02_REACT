@@ -1,8 +1,39 @@
-import React from 'react';
+import { faHeart, faSearch, faShoppingCart, faTimes, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch,faHeart,faShoppingCart, faUser} from '@fortawesome/free-solid-svg-icons';
+import { SetStateAction, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-export default function Header() {
+
+
+export interface ChildProps {
+   setSearchValue: any,
+   totalCartProduct: number
+}
+
+export default function Header(props: ChildProps) {
+  var isLogin = sessionStorage.getItem("isLogin");
+
+  const {setSearchValue, totalCartProduct} = props
+
+  const [inputChangeValue, setInputChangeValue] = useState('');
+
+  // const [productCartTotal, setProductCartTotal] = useState(0);
+
+
+  const handleInputChange = (e: { preventDefault: () => void; target: { value: SetStateAction<string>; }; }) => {
+    e.preventDefault();
+    setInputChangeValue(e.target.value);
+  };
+
+  const handleSearchClick = () => {
+    setSearchValue(inputChangeValue)
+  };
+
+  const handleClearClick = () => {
+    setInputChangeValue('');
+    setSearchValue('');
+  };
+
+
   return (
     <>
       <div className="main-navbar">
@@ -13,40 +44,76 @@ export default function Header() {
               <NavLink to="/" className="brand-name">PiTi Cosmetic</NavLink>
               </div>
               <div className="col-md-4 my-auto">
-                <form id="product-search-form" role="search">
-                  <div className="input-group">
-                    <input
-                      type="search"
-                      id="search-input"
-                      placeholder="Tìm kiếm sản phẩm"
-                      className="form-control"
-                    />
-                    <button className="btn bg-white" type="submit">
-                    <FontAwesomeIcon icon={faSearch} />
-                    </button>
-                  </div>
-                </form>
+
+<form id="product-search-form" role="search">
+  <style>{`
+    .custom-input-group input[type="search"]::-webkit-search-clear-button,
+    .custom-input-group input[type="search"]::-moz-cancel-image {
+      display: none;
+    }
+  `}</style>
+
+  <div className="input-group custom-input-group">
+    <input
+      // type="search"
+      id="search-input"
+      placeholder="Tìm kiếm sản phẩm"
+      className="form-control"
+      value={inputChangeValue}
+      onChange={handleInputChange}
+    />
+    <button className="btn bg-white" type="button" onClick={handleSearchClick}>
+      <FontAwesomeIcon icon={faSearch} />
+    </button>
+    {inputChangeValue && (
+      <button className="btn bg-white" type="button" onClick={handleClearClick}>
+        <FontAwesomeIcon icon={faTimes} />
+      </button>
+    )}
+  </div>
+</form>
+
               </div>
               <div className="col-md-5 my-auto">
                 <ul className="nav d-flex justify-content-between align-items-center">
                 <li className="nav-bar-item">
-                  <NavLink to="/Cart">
-                    <FontAwesomeIcon icon={faShoppingCart} /> Giỏ hàng
-                    <span> </span>
-                  </NavLink>
-                </li>
+  <NavLink to="/Cart" className="position-relative">
+    <FontAwesomeIcon icon={faShoppingCart} className="position-relative" />
+
+{
+  totalCartProduct > 0 ?     <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+  {totalCartProduct}
+  <span className="visually-hidden">unread messages</span>
+</span> : null 
+}
+
+
+    Giỏ hàng
+  </NavLink>
+</li>
+
                 <li className="nav-bar-item">
                   <NavLink to="/Favor">
                     <FontAwesomeIcon icon={faHeart} />
                     Yêu thích
                   </NavLink>
                 </li>
-                <li className="nav-bar-item" id="info-user">
-                  <NavLink to="/Login">
-                    <FontAwesomeIcon icon={faUser} />
-                    Tài khoản
-                  </NavLink>
-                </li>
+{
+  isLogin === "true" ? 
+  <div>
+    <span>
+      <h1>Hello</h1>
+    </span>
+  </div>
+:
+  <li className="nav-bar-item" id="info-user">
+  <NavLink to="/Login">
+    <FontAwesomeIcon icon={faUser} />
+    Tài khoản
+  </NavLink>
+</li>
+}
+
                   <li className="nav-bar-item" id="user-logout">
                     <a href="">
                       <i className="fa-solid fa-arrow-right-from-bracket" />

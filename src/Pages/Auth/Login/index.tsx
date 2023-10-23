@@ -1,25 +1,24 @@
-import * as React from "react";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import Typography from "@mui/material/Typography";
+import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Checkbox from "@mui/material/Checkbox";
 import Container from "@mui/material/Container";
+import CssBaseline from "@mui/material/CssBaseline";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Grid from "@mui/material/Grid";
+import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useSelector, useDispatch } from "react-redux";
-import {
-  loginSuccess,
-  loginFailure,
-  AuthState,
-} from "../../../redux/slice/Authslice";
-import { useNavigate } from "react-router";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 import axios from "axios";
+import * as React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router";
+import {
+AuthState, loginFailure, loginSuccess
+} from "../../../redux/slice/Authslice";
+
 
 const defaultTheme = createTheme();
 
@@ -35,6 +34,16 @@ export default function SignIn() {
     return emailPattern.test(email);
   };
 
+  // const [cookies, setCookie] = useCookies(["isLogin"])
+
+
+
+  // const logout = () => {
+
+  //   sessionStorage.setItem("isLogin", "false");
+
+  // }
+  
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const email = event.currentTarget.email.value;
@@ -44,11 +53,12 @@ export default function SignIn() {
       passwordValue = "";
 
     if (email && password) {
-      emailValue = email.value;
-      passwordValue = password.value;
+      emailValue = email;
+      passwordValue = password;
     }
 
-    if (emailValue.trim() == "") {
+    console.log(emailValue)
+    if (emailValue.trim() === "") {
       alert("Email is required. Please input!");
       return;
     }
@@ -69,6 +79,7 @@ export default function SignIn() {
       if (response.data) {
         // Đăng nhập thành công
         dispatch(loginSuccess({ email, password }));
+        sessionStorage.setItem("isLogin", "true");
         alert("Logged in successfully");
         navigate("/");
       } else {
