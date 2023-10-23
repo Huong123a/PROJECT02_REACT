@@ -1,40 +1,45 @@
+import { useLocation } from "react-router-dom";
 
- import { useLocation } from "react-router-dom";
-
-
-
-export default function ProductDetail(){
-
+export default function ProductDetail() {
   let location = useLocation();
 
-    return(
-        <section className="product_detail-content">
+  return (
+    <div className="product-detail-page">
+      <div className="product-detail-container">
+        <div className="product-detail-image">
           <img
-          src="./img1.webp"
-          alt="Sản phẩm 2"
-          className="card-img-top"
-        />
-  <h4>{location.state.name}</h4>
-  <h5>Giá: {location.state.price}VNĐ</h5>
-  <p>Chọn số lượng:</p>
-  <div className="btn-quantity">
-    <button className="btn-quantity-reduce">-</button>
-    <input className="quantity-input" type="text" defaultValue={1} />
-    <button className="btn-quantity-add">+</button>
-  </div>
-  <div>
-    <a>
-      <button className="btn-add-product_detail">Thêm vào giỏ hàng</button>
-    </a>{" "}
-    <br />
-    <button className="product_detail-btn-buynow">Mua ngay</button>
-  </div>
-  <h6>Mô tả sản phẩm</h6>
-  <hr />
-  Skin Perfecting 2% BHA Liquid Exfoliant là sản phẩm loại bỏ tế bào chết hóa
-  học có công thức dịu nhẹ, không chứa chất làm bào mòn da, dễ dàng thẩm thấu và
-  không làm bít tắc lỗ chân lông.
-</section>
+            src="/img1.webp" // Update the path to your image
+            alt={location.state.name}
+            className="product-detail-img"
+          />
+        </div>
 
-    )
+        <div className="product-detail-info">
+          <h1 className="product-detail-title">{location.state.name}</h1>
+          <h2 className="product-detail-price">
+            Giá: {location.state.price}VNĐ
+          </h2>
+          <p className="product-detail-description">
+            Skin Perfecting 2% BHA Liquid Exfoliant là sản phẩm loại bỏ tế bào
+            chết hóa học có công thức dịu nhẹ, không chứa chất làm bào mòn da,
+            dễ dàng thẩm thấu và không làm bít tắc lỗ chân lông.
+          </p>
+          <div className="product-detail-quantity">
+            <p>Chọn số lượng:</p>
+            <div className="btn-quantity">
+              <button className="btn-quantity-reduce">-</button>
+              <input className="quantity-input" type="text" defaultValue={1} />
+              <button className="btn-quantity-add">+</button>
+            </div>
+          </div>
+          <div className="product-detail-buttons">
+            <button className="btn-add-product_detail">
+              Thêm vào giỏ hàng
+            </button>
+            <button className="product_detail-btn-buynow">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
